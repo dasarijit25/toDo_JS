@@ -1,0 +1,159 @@
+/*to remove default browser styling*/ 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Manual Styling Bigins*/
+
+
+body
+{
+    background-image: linear-gradient(to right,rgb(28, 182, 74), rgb(208, 241, 206));
+    color: whitesmoke;
+    font-family: 'Open Sans', sans-serif;
+}
+
+header, form
+{
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tdInput
+{
+    color: rgb(28, 182, 74);
+}
+
+form input, form button
+{
+    padding: 0.5rem;
+    font-size: 2rem;
+    border: none;
+    background: rgb(255, 255, 255);
+}
+
+form button
+{
+    color:rgb(28, 182, 74);
+    cursor: pointer;
+    transition: all 0.35s ease;
+    background: white
+}
+form button:hover 
+{
+    background: rgb(85, 236, 131);
+    color: whitesmoke;
+}
+
+.tdContainer
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+
+.tdList
+{
+    min-width: 40%;
+    list-style: none;
+}
+
+.todo
+{
+    transition: all 0.7s ease;
+    margin: 0.5rem;
+    background:rgb(255, 255, 255);
+    color: rgb(28, 182, 74);
+    display: flex;
+    font-size: 1.5rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.todo li
+{
+    flex: 1;
+}
+
+.completed-btn, .trash-btn
+{
+    background: rgb(28, 182, 74);
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+
+.trash-btn
+{
+    background: rgb(231, 48, 48);
+}
+
+.tdItem
+{
+    padding: 0.5rem;
+}
+
+.fa-check, .fa-trash
+{
+    pointer-events: none;
+}
+
+.completed
+{
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.fallAnimation
+{
+    transform: translateY(2rem) rotateZ(3deg);
+    opacity: 0;
+    transition: all 0.27s ease;
+}
+
+
+select
+{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+}
+select
+{
+    border: none;
+    color: rgb(28, 182, 74);
+    width: 10rem;
+    cursor: pointer;
+    padding: 1rem;
+    
+}
+.select
+{
+    margin: 1.3rem;  
+    position: relative;
+    overflow: hidden;
+}
+.select::after
+{
+    content: "\25BC";
+    position: absolute;
+    background: rgb(28, 182, 74);
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    pointer-events: none;
+}
+.select:hover::after
+{
+    background:  rgb(85, 236, 131);
+    color: whitesmoke;
+    transition: all .3s ease;
+}
